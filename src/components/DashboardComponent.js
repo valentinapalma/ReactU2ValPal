@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './ModuleStyling.module.css';
 import UserComponent from './UserComponent';
-import WrapperComponent from './WrapperComponent';
+import CardComponent from './CardComponent';
 
 /*
 Renderar alla components som ska renderas, har input, add & remove knapp och innehåller även nuvarande state.
@@ -52,11 +52,11 @@ class DashboardComponent extends Component {
     render() {
         return (
             <div className={styles.dashboard}>
-                <WrapperComponent>
+                <CardComponent>
                     <UserComponent carried={this.state} toggleColor={this.toggleColor}/>
-                </WrapperComponent>
+                </CardComponent>
 
-                <WrapperComponent>
+                <CardComponent>
                     <input 
                         value={this.state.value}
                         type="text"
@@ -69,7 +69,7 @@ class DashboardComponent extends Component {
                     <button
                         onClick={this.removeUser}
                         className={styles.remove}>Remove</button>
-                </WrapperComponent>
+                </CardComponent>
             </div>
         )
     }
